@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Реєстраця</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="index.html" class="button">Головна</a>
+      <a href="trainers.html" class="button">Тренери</a>
+      <h1>Реєстація Абонименту</h1>
+    </header>
+    <form action="/register" method="post">
+      <p>
+        <label for="name">Імʼя:</label><br />
+        <input
+          type="text"
+          id="name"
+          name="name"
+          required
+          placeholder="Ваше Імʼя" />
+      </p>
+      <p>
+        <label for="email">Електронна Адреса</label><br />
+        <input
+          type="email"
+          id="email"
+          name="email"
+          required
+          placeholder="Ваша Електронна Адреса" />
+      </p>
+      <p>
+        <label for="age">Вік</label>
+        <input
+          type="number"
+          id="age"
+          name="age"
+          min="8"
+          max="99"
+          required
+          placeholder="Ваш Вік" />
+      </p>
+      <p>
+        <label for="course">Обрати Абонимент</label>
+        <select id="course" name="course" required>
+          <option value="">Оберіть Абонимент</option>
+          <option value="solo">Абонимент Без Тренера</option>
+          <option value="with trainer">Абонимент з Тренером</option>
+          <option value="wt free time">
+            Абонимент з Тренером і вільним графіком
+          </option>
+        </select>
+      </p>
+      <p>Вибір розкладу тренуваннь</p>
+      <label>
+        <input type="radio" name="format" value="day1,3,5" required />
+        Понеділок,Середа,П'ятниця
+      </label>
+      <label>
+        <input type="radio" name="format" value="day2,4,6" />
+        Вівтрок,Четвер,Субота
+      </label>
+      <label>
+        <input type="radio" name="format" value="dayfree" /> Вільний графік
+        тренуваннь </label
+      ><br />
+      <label>
+        <input type="checkbox" name="agree" required />
+        "Я погоджуюсь з правилами і умовами користування"
+      </label>
+      <p>
+        <label for="comment">Про себе</label><br />
+        <textarea
+          id="comment"
+          name="comment"
+          rows="5"
+          placeholder="Розкажи про себе"></textarea>
+      </p>
+      <button type="submit">Відправити Заявку</button>
+      <button type="reset">Очистити</button>
+    </form>
+    <footer>
+      <p>&copy; 2026 Fitnes Center</p>
+      <address>
+        <a href="mailto:FitCentr@email.com">FitCentr@email.com</a>
+      </address>
+    </footer>
+  </body>
+</html>
